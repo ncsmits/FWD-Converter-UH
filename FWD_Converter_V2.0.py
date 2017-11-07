@@ -138,7 +138,8 @@ def conversion( importfile, CROW_factor ):
         # Create the lines with loaction and temperature data
         fileF25.write('5280,0,     0,+%2.7f,+00%1.7f,91.7, 4, 10, 100,  0.9 \n' % (lattitudeDecimal[i], longitudeDecimal[i]) )
         
-        if i > 1 and time[i] < time[i-1]:
+        # Check if midnight is passed between 2 measurements
+        if i >= 1 and time[i] < time[i-1]:
             date = date+86400
         
         fileF25.write('5301,2,1,4,2,  %6s,1,1,"%s       ",20%s,%s,%s,%s,%s\n' % (chainage[i], lane[i], datetime.fromtimestamp(date).strftime('%y'), \
