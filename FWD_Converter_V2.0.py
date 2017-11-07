@@ -2,17 +2,8 @@
 """
 Created on Mon Aug 21 22:13:00 2017
 
-@author: Coen.Smits
-"""
+@author: Coen.Smits, csmits@unihorn.nl
 
-"""
-Om te converteren: 
-    bestanden kopieren naar C:/Python
-    cmd prompt openen en naar deze map gaan
-    'activate main' typen
-    'pyton setup.py py2exe' typen
-    includes map en defaults.setup naar dist kopieren
-    klaar
 """
 
 #from fwdconvert import conversion
